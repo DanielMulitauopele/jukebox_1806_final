@@ -1,7 +1,4 @@
 class Admin::GenresController < Admin::BaseController
-  def new
-    @genre = Genre.new
-  end
 
   def create
     @genre = Genre.create(genre_params)

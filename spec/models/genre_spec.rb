@@ -19,6 +19,7 @@ describe Genre, type: :model do
       @song_1 = @genre_1.songs.create!(title: 'Superfreak', length: 300, play_count: 5000000, rating: 4, artist_id: 1)
       @song_2 = @genre_1.songs.create(title: 'Bye Bye Bye', length: 300, play_count: 5000000, rating: 1, artist_id: 1)
       @song_3 = @genre_1.songs.create(title: 'Purple Rain', length: 300, play_count: 5000000, rating: 5, artist_id: 1)
+      @song_4 = @genre_2.songs.create(title: 'Other Song', length: 300, play_count: 5000000, rating: 2, artist_id: 1)
     end
     it 'should average ratings' do
       expect(@genre_1.average_rating).to eq(3.33)
